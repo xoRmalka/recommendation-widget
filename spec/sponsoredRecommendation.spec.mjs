@@ -1,4 +1,4 @@
-import { renderSponsoredRecommendation } from "../src/js/recommendations/sponsored/sponsoredRecommendation.js";
+import { renderSponsoredRecommendation } from "../src/components/recommendations/sponsoredRecommendation.js";
 
 describe("Sponsored Recommendation Tests", function () {
   it("should render sponsored recommendation correctly", function () {

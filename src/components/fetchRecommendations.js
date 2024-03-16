@@ -1,9 +1,6 @@
-// Function to fetch recommendations from the Taboola API
-async function fetchRecommendations(recommendationsWidget) {
+// Fetch recommendations from the Taboola API
+async function fetchRecommendations() {
   try {
-    if (!recommendationsWidget) {
-      throw new Error("Recommendations widget element not found.");
-    }
     // Define parameters for the URL
     const publisherId = "taboola-templates";
     const appType = "desktop";

@@ -1,17 +1,16 @@
 import { createRecommendationElement } from "./createRecommendationElement.js";
 
-// Function to render recommendations onto the recommendations widget
+// Render recommendations onto the recommendations widget
 function renderRecommendations(recommendations, recommendationsWidget) {
   if (!recommendationsWidget) {
     console.error("Recommendations widget element not found.");
-    return; // Exit early if recommendationsWidget is not found
+    return; 
   }
 
   // Create a wrapper element for recommendations
   const recommendationsWrapper = document.createElement("div");
   recommendationsWrapper.classList.add("recommendations-wrapper");
 
-  // Iterate through each recommendation and render it
   recommendations.forEach((recommendation) => {
     try {
       const imageUrl = recommendation?.thumbnail?.[0]?.url;

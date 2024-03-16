@@ -1,4 +1,4 @@
-import {renderOrganicRecommendation} from '../src/js/recommendations/organic/organicRecommendation.js';
+import {renderOrganicRecommendation} from '../src/components/recommendations/organicRecommendation.js';
 
 describe("Organic Recommendation Tests", function () {
   it("should render organic recommendation correctly", function () {

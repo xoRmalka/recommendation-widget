@@ -1,4 +1,4 @@
-import { createRecommendationElement } from "../src/js/components/createRecommendationElement.js";
+import { createRecommendationElement } from "../src/components/createRecommendationElement.js";
 
 describe("Event Listener Tests for Create Recommendation Element", function () {
   it("should open sponsored recommendation in a new tab when clicked", function () {
@@ -8,7 +8,6 @@ describe("Event Listener Tests for Create Recommendation Element", function () {
       url: "https://www.example.com/sponsored",
     };
     
-    // Create recommendation element
     const element = createRecommendationElement(recommendation);
 
     // Mock window.open function
@@ -28,7 +27,6 @@ describe("Event Listener Tests for Create Recommendation Element", function () {
       url: "https://www.example.com/organic",
     };
 
-    // Create recommendation element
     const element = createRecommendationElement(recommendation);
 
     // Mock window.open function

@@ -1,4 +1,4 @@
-import { renderRecommendations } from "../src/js/components/renderRecommendations.js";
+import { renderRecommendations } from "../src/components/renderRecommendations.js";
 
 describe("renderRecommendations Function Test", function () {
   let container;
@@ -7,12 +7,11 @@ describe("renderRecommendations Function Test", function () {
     // Create a container element to render recommendations
     container = document.createElement("div");
     container.id = "recommendations-widget";
-    container.style.display = "none"; // Hide the container
+    container.style.display = "none";
     document.body.appendChild(container);
   });
 
   afterAll(function () {
-    // Remove the container element after all tests are done
     document.body.removeChild(container);
   });
 
@@ -34,10 +33,8 @@ describe("renderRecommendations Function Test", function () {
       },
     ];
 
-    // Call the function
     renderRecommendations(recommendations, container);
 
-    // Wait for recommendations to be rendered
     setTimeout(function () {
       // Check if two recommendation cards are rendered
       const recommendationsWrapper = document.querySelector(
@@ -48,8 +45,7 @@ describe("renderRecommendations Function Test", function () {
       );
       expect(recommendationCards.length).toBe(2);
 
-      done(); // Indicate that the test is done
-    }, 400); // Timeout value
+      done();
+    }, 400);
   });
 });
-
