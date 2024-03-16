@@ -1,0 +1,131 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.recommendations-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+/* Recommendation cards with image */
+.recommendation-card.have-image {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.recommendation-card.have-image:hover {
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-card.have-image .thumbnail {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.recommendation-card.have-image .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recommendation-card.have-image .info {
+  padding: 15px;
+}
+
+.recommendation-card.have-image h3 {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+}
+
+.recommendation-card.have-image p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  font-size: 16px;
+}
+
+.recommendation-card.have-image .ad-label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: bold;
+}
+.recommendation-card.have-image .ad-label p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* Recommendation cards without image */
+.recommendation-card.no-image {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.recommendation-card.no-image:hover {
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-card.no-image .info {
+  padding: 15px;
+}
+
+.recommendation-card.no-image h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.recommendation-card.no-image p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  font-size: 16px;
+}
+
+.recommendation-card.no-image .ad-label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.recommendation-card.no-image .ad-label p {
+  margin: 0;
+  font-size: 12px;
+}
