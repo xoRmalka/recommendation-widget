@@ -1,14 +1,21 @@
-import { renderSponsoredRecommendation } from "../recommendations/sponsored/sponsoredRecommendation.js";
-import { renderOrganicRecommendation } from "../recommendations/organic/organicRecommendation.js";
+import { renderSponsoredRecommendation } from "./recommendations/sponsoredRecommendation.js";
+import { renderOrganicRecommendation } from "./recommendations/organicRecommendation.js";
 
-// Function to create a recommendation element based on its origin
+// Create a recommendation element based on its origin
 function createRecommendationElement(recommendation, hasThumbnail) {
+  
+  // Ensure recommendation origin exists
+  if(!recommendation.origin) {    
+    console.error("Recommendations widget element not found.");
+  return; 
+  }
+  
   const recommendationElement = document.createElement("div");
   recommendationElement.classList.add("recommendation-card");
 
   // Add additional class based on whether it has an image or not
   recommendationElement.classList.add(hasThumbnail ? "have-image" : "no-image");
-
+  
   // Render the recommendation based on its origin (sponsored or organic; additional types may be added in the future)
   switch (recommendation.origin) {
     case "sponsored":
