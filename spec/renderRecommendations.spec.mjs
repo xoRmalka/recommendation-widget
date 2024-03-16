@@ -15,7 +15,7 @@ describe("renderRecommendations Function Test", function () {
     document.body.removeChild(container);
   });
 
-  it("should render two recommendation items when provided with two items", function (done) {
+  it("should render two recommendation items when provided with two items", function () {
     // Mock recommendations data with two items
     const recommendations = [
       {
@@ -33,19 +33,18 @@ describe("renderRecommendations Function Test", function () {
       },
     ];
 
-    renderRecommendations(recommendations, container);
-
-    setTimeout(function () {
-      // Check if two recommendation cards are rendered
-      const recommendationsWrapper = document.querySelector(
-        ".recommendations-wrapper"
-      );
-      const recommendationCards = recommendationsWrapper.querySelectorAll(
-        ".recommendation-card"
-      );
-      expect(recommendationCards.length).toBe(2);
-
-      done();
-    }, 400);
+    return new Promise(resolve => {
+      renderRecommendations(recommendations, container, () => {
+        // Check if two recommendation cards are rendered
+        const recommendationsWrapper = document.querySelector(
+          ".recommendations-wrapper"
+        );
+        const recommendationCards = recommendationsWrapper.querySelectorAll(
+          ".recommendation-card"
+        );
+        expect(recommendationCards.length).toBe(2);
+        resolve();
+      });
+    });
   });
 });
