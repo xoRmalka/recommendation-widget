@@ -6,6 +6,17 @@ The Vanilla JS Recommendation Widget project aims to create a versatile recommen
 ## Objective
 The primary goal was to design and implement a recommendation widget using Vanilla JavaScript. Leveraging the Taboola REST API, the widget fetches recommendations and presents them in an intuitive interface. The widget is responsive, functional, and easily extendable for future enhancements, such as adding new recommendation types.
 
+## Implementation on Client Website
+The script needs to be implemented on the client's website, along with a designated `<div>` element where the widget will be displayed. Here's how the implementation process works:
+
+1. **Placement of Script:** The client embeds the script into their website. Upon loading, the script identifies the designated `<div>` element by its ID.
+
+2. **Fetching Data:** Once the website's DOM is loaded, the script triggers and fetches the recommendation data from the Taboola REST API.
+
+3. **Widget Creation:** After retrieving the recommendation data, the script dynamically creates HTML elements for each recommendation.
+
+4. **Integration with Website DOM:** Finally, the script integrates the recommendation widget into the client's website DOM, displaying it within the designated `<div>` element as specified by the client.
+
 ## Getting Started
 There are two folders for the project, one using Vite and the other without Vite.
 
